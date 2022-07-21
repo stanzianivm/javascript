@@ -50,6 +50,40 @@ lastElements.forEach( (number) => { arrayEven.push(number); })
 console.log('Array numbers with last elements of new array', arrayEven);
 
 // 7. Print all the odd numbers from that array
+numbers.forEach(number => {
+    if (number % 2 !== 0) {
+          console.log('Odd number', number);
+    }
+});
+
 // 8. Separate the odd numbers in their own array
+var arrayOdd = numbers.filter(number => {
+    return (number % 2) !== 0;
+});
+console.log('Array odd', arrayOdd);
+
 // 9. All 10 random odd numbers to the new array. From those 10, 5 of them must be add at first, 2 of them somewhere in between, and the remaining 3 at the end of the array
+firstFive.forEach( (number) => { arrayOdd.unshift(number); });
+console.log('Array odd numbers with first five elements in the beggining', arrayOdd);
+
+twoElementsOfArray.forEach( (number) => arrayOdd.splice(6, 0, number));
+console.log('Array numbers with two elements of new array', arrayOdd);
+
+lastElements.forEach( (number) => { arrayOdd.push(number); })
+console.log('Array numbers with last elements of new array', arrayOdd);
+
 // 10. Print all the prime numbers
+arrayOdd.forEach(number => {
+    if (number <= 1) {
+        console.log(number + ' es menor a 1');
+    } else {
+        for (var i = 2; i < number; i++) {
+            if (number % i === 0) {
+                console.log(number + ' no es número primo');
+              	break;
+            }
+        }
+        console.log(number + ' es número primo');      	
+    }
+});
+
