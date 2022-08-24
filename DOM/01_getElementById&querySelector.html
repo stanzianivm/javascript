@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoTracker</title>
+</head>
+<body>
+    <h1 id="title">Todo Tracker</h1>
+
+    <form>
+      <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+        <li class="todos">List item 1</li>
+        <li class="todos">List item 2</li>
+        <li class="todos">List item 3</li>
+    </ul>
+
+    <button id="clear">Clear All</button>
+
+    <script>
+        // getElementById()
+        var titleId = document.getElementById('title');
+
+        // querySelector()
+        var titleQuerySelector = document.querySelector('#title');
+
+        // get fist element of list
+        var firstElement = document.getElementById('todos');
+
+        // changing the DOM with document.textContent property
+        titleId.textContent = 'My Todo Tracker'
+
+        // More DOM methods and properties
+        // appendChild(): adds a node to the end of the list of children of a specified parent node.
+        // removeChild(): removes a child node from the DOM.
+        // createElement(): creates the HTML element specified by tagName.
+        // fistChild(): read-only property return the node's first child in the tree.
+
+        // task: create a variable called 'todo' and assign to it the value of an `li` tag we have created using 'document.createElement('li')'
+        var todo = document.createElement('li');
+
+        // task: use textContent property to assign a string of a todo you would like to display
+        todo.textContent = 'Go to sleep';
+
+        // task: create a variable called `todosList` and assign to it the target of the `ul` tag
+        var todosList = document.querySelector('ul');
+
+        // task: use appendChild() on todosList to add todo
+        todosList.appendChild(todo);
+
+    </script>
+</body>
+</html>
+

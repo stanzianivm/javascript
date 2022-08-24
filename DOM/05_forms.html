@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoTracker</title>
+</head>
+<body>
+    <h1 id="title">Todo Tracker</h1>
+
+    <form>
+      <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+        <li class="todos">List item 1</li>
+        <li class="todos">List item 2</li>
+        <li class="todos">List item 3</li>
+    </ul>
+
+    <button id="clear">Clear All</button>
+
+    <script>
+        // task: create variables that targer the 'form' element and the 'input' id
+        let form = document.querySelector('form');
+
+        // task: add event listener to 'formField' listening for a 'submit' and console log the text "form has been submitted"
+        // Any time we refresh the page we have to declare our variables again
+        // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let input = document.getElementById('user-todo');
+            console.log(input.value);
+        });
+
+        // The submit event is fired when a form is submitted
+
+
+    </script>
+</body>
+</html>
+

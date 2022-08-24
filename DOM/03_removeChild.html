@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoTracker</title>
+</head>
+<body>
+    <h1 id="title">Todo Tracker</h1>
+
+    <form>
+      <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+        <li class="todos">List item 1</li>
+        <li class="todos">List item 2</li>
+        <li class="todos">List item 3</li>
+    </ul>
+
+    <button id="clear">Clear All</button>
+
+    <script>
+        // removeChild(): removes a child node from the DOM.
+        // fistChild(): read-only property return the node's first child in the tree.
+
+        // Task: On the todosList apply the removeChild() DOM method and pass to it the argument of our todosList with the property of firstChild
+
+        // create a variable and assign to it the target of the `ul` tag
+        var todosList = document.querySelector('ul');
+
+        // Task: create a while loop with conditional of `todosList.firstChild`. In the code block run `todosList.removeChild(todosList.firstChild)`
+        while (todosList.firstChild) {
+            // using firstChils to remove
+            todosList.removeChild(todosList.firstChild);
+        }
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoTracker</title>
+</head>
+<body>
+    <h1 id="title">Todo Tracker</h1>
+
+    <form>
+      <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+        <li class="todos">List item 1</li>
+        <li class="todos">List item 2</li>
+        <li class="todos">List item 3</li>
+    </ul>
+
+    <button id="clear">Clear All</button>
+
+    <script>
+        // localStorage: web storage that stores data with no expiration date
+        // methods: setItem(), getItem(), remov eItem(), clear()
+
+        // setItem(): add a key and value to local storage
+        localStorage.setItem('todos', 'Make Breakfast');
+
+        // getItem(): retrieve a value by the kye
+        localStorage.getItem('todos');
+
+        // removeItem(): remove an item by key
+        localStorage.removeItem('todos');
+
+        // clear(): clear all storage
+        localStorage.clear();
+
+    </script>
+</body>
+</html>
+

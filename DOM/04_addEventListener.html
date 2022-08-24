@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoTracker</title>
+</head>
+<body>
+    <h1 id="title">Todo Tracker</h1>
+
+    <form>
+      <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+        <li class="todos">List item 1</li>
+        <li class="todos">List item 2</li>
+        <li class="todos">List item 3</li>
+    </ul>
+
+    <button id="clear">Clear All</button>
+
+    <script>
+        // addEventListener(): attaches an event handler to the specified element.
+        // attaches an element without overwriting existing event habdler.
+        // syntax: element.addEventListener(event, function);
+
+        // task: add an `addEventListener` on our button element. Pass to it `click` event and for the second argument a `console.log("You have clicked the button");`
+        // document.getElementById("clear").addEventListener("click", myFunction);
+
+        // function myFunction() {
+        //     console.log("You have clicked the button");
+        // }
+
+        // other solution
+        document.getElementById("clear").addEventListener("click", function () { console.log("You have clicked the button"); });
+
+    </script>
+</body>
+</html>
+
