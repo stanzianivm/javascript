@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game"></div>
+
+    <button id="display">Show Image</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        // AJAX is a developer's dream, because you can:
+        // Update a web page without reloading the page
+        // Request data from a server - after the page has loaded
+        // Receive data from a server - after the page has loaded
+        // Send data to a server - in the background
+
+        $(document).ready(function() {
+            $("#display").click(function() {
+                $.ajax({    //create an ajax request to display.php
+                    type: "GET",
+                    url: "https://dog.ceo/api/breeds/image/random",
+                    dataType: "JSON",   //expect html to be returned
+                    success: function(response){
+                        createImg(response);
+                    }
+                });
+            });
+        });
+
+        function createImg(data) {
+            console.log(data);
+            let game = document.getElementById('game');
+            let section = document.createElement('section');
+
+            game.appendChild(section);
+
+            let img = document.createElement('img');
+            img.src = data.message;
+            img.width = 100;
+            img.height = 100;
+            // img.style.backgroundImage = `url(${data.message})`;
+
+            section.appendChild(img);
+        }
+    </script>
+</body>
+</html>
